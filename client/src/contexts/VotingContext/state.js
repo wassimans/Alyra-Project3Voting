@@ -17,6 +17,12 @@ const reducer = (state, action) => {
   switch (type) {
     case actions.init:
       return { ...state, ...data };
+    case "UPDATE_VOTER_LIST": {
+      return {
+        ...state,
+        voterList: action.payload,
+      };
+    }
     case "ADD_VOTER": {
       return {
         ...state,
